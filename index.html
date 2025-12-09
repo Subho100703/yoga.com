@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yoga by Aditi — Responsive (Bootstrap 5)</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- font icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  <style>
+    :root{
+      --accent:#2f8f6a;
+      --accent-dark:#266f53;
+      --muted:#6c757d;
+      --card-radius:14px;
+    }
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;color:#222}
+    .navbar-brand { font-weight:700; letter-spacing:0.2px; }
+    .hero {
+      background: linear-gradient(180deg, rgba(47,143,106,0.06), rgba(47,143,106,0.02));
+      padding: 3.5rem 0;
+      border-radius: 18px;
+    }
+    .hero .lead { color: #234; font-weight:600; }
+    .badge-accent { background: var(--accent); color:#fff; border-radius:999px; padding:6px 10px; font-weight:600; }
+    .card-round { border-radius: var(--card-radius); box-shadow: 0 6px 20px rgba(45,55,72,0.06); }
+    .pose-img { height:180px; object-fit:cover; border-top-left-radius: var(--card-radius); border-top-right-radius: var(--card-radius); }
+    .trainer-img { width:120px; height:120px; object-fit:cover; border-radius:50%; border:6px solid #fff; box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+    .pricing .card { border: none; }
+    .testimonial { min-height:120px; }
+    footer{ padding:2rem 0; background:#f8fafb; margin-top:3rem; border-top: 1px solid #eee;}
+    .whatsapp-btn{
+  background:#25D366;
+  border:none;
+  font-weight:bold;
+}
+.whatsapp-btn:hover{
+  background:#1ebe5e;
+}
+#membership h1.counter{
+  font-size:60px;
+  color:#ff9800;
+  font-weight:700;
+}
+
+#membership h6{
+  margin-top:6px;
+  font-weight:600;
+}
+
+
+    .main-img {
+      border: solid;
+      border:dotted;
+      padding: 2px;
+    }
+    /* responsive tweaks */
+    @media (max-width:576px){
+      .hero { padding:2rem 0; }
+      .pose-img { height:140px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/20251126_091832.jpg" alt="logo" style="height:40px; margin-right:10px;">
+     
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#poses">Poses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-2"><a class="btn btn-outline-success" href="#getstarted">Get started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="container mt-4">
+  <div data-aos="fade-up" class="hero p-4 p-md-5 d-flex align-items-center">
+    <div class="row w-100 gx-4">
+      <div class="col-md-7">
+        <span class="badge-accent">Yoga is the fountain of youth.</span>
+        <h1 class="mt-3">You're only as young as your spine is flexible.</h1>
+        <p class="lead mt-3">Let your breath be your anchor, and your mat be your mirror. Yoga is not a work-out; it is a work-in.</p>
+        <div class="mt-4">
+          <a href="#poses" class="btn btn-success btn-lg me-2">Get more details</a>
+          <a href="#contact" class="btn btn-outline-secondary btn-lg">Contact us</a>
+        </div>
+      </div>
+      <div class="col-md-5 d-none d-md-block text-center">
+        <img  data-aos="fade-left" data-aos-duration="1200" src="images/IMG-20240930-WA0020 (1).jpg" alt="yoga" class="img-fluid rounded-3 shadow-sm">
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- FEATURES -->
+<section class="container my-5">
+  <div class="row g-4">
+
+    <div data-aos="zoom-in" class="col-md-3">
+      <div class="p-4 card-round text-center">
+        <i class="fas fa-book-open fa-2x mb-3"></i> 
+        <h6 class="mb-2">Deep Study</h6>
+        <p class="small text-muted">Library of courses, articles and e-books for deeper practice.</p>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in" class="col-md-3">
+      <div class="p-4 card-round text-center">
+        <i class="fas fa-spa fa-2x mb-3"></i>
+        <h6 class="mb-2">Diverse Classes</h6>
+        <p class="small text-muted">From prenatal to nidra — classes for all levels.</p>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in" class="col-md-3">
+      <div class="p-4 card-round text-center">
+        <i class="fas fa-heart fa-2x mb-3"></i>
+        <h6 class="mb-2">Holistic</h6>
+        <p class="small text-muted">Physical, mental and spiritual wellbeing combined.</p>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in" class="col-md-3">
+      <div class="p-4 card-round text-center">
+        <i class="fas fa-sliders-h fa-2x mb-3"></i>
+        <h6 class="mb-2">Customize</h6>
+        <p class="small text-muted">Create playlists, set goals and design routines.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- POSES -->
+<section id="poses" class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Some yoga poses...</h3>
+  </div>
+
+  <div data-aos="fade-up" class="row g-4">
+    <!-- Pose 1 -->
+    <div class="col-md-4">
+      <div class="card card-round overflow-hidden">
+        <img src="https://subho100703.github.io/yoga/images/IMG-20240930-WA0014.jpg" class="pose-img w-100" alt="Paschimottanasana">
+        <div class="p-3">
+          <h5>Paschimottanasana</h5>
+          <p class="small text-muted">Paschimottanasana is also known as the Seated Forward Bend. In Sanskrit, "Paschima" refers to the back or west side of the body, and "Uttana" means intense stretch, describing the deep stretch of the spine in this pose.</p>
+          <a href="#" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#pose1Modal">Read more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pose 2 -->
+    <div data-aos="fade-up" class="col-md-4">
+      <div class="card card-round overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" class="pose-img w-100" alt="Ardha Matsyendrasana">
+        <div class="p-3">
+          <h5>Ardha Matsyendrasana</h5>
+          <p class="small text-muted">Ardha Matsyendrasana, or the Half Lord of the Fishes Pose, is a seated spinal twist in yoga that increases spinal flexibility, massages abdominal organs, aids digestion, relieves back pain, and reduces stress.</p>
+          <a href="#" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#pose2Modal">Read more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pose 3 -->
+    <div data-aos="fade-up" class="col-md-4">
+      <div class="card card-round overflow-hidden">
+        <img src="images/IMG-20240930-WA0019.jpg" class="pose-img w-100" alt="Bakasana">
+        <div class="p-3">
+          <h5>Bakasana</h5>
+          <p class="small text-muted">Yoga offers benefits like reduced stress and anxiety, improved flexibility and balance, better heart health, pain relief (especially back pain), and enhanced mental clarity/focus,</p>
+          <a href="#" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#pose3Modal">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODALS (footer এর আগে paste করো) -->
+<!-- Pose 1 Modal -->
+<div class="modal fade" id="pose1Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content shadow-lg rounded-4">
+      <div class="modal-header bg-success text-white rounded-top-4">
+        <h5 class="modal-title">Paschimottanasana</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="https://subho100703.github.io/yoga/images/IMG-20240930-WA0014.jpg" class="img-fluid rounded-start-4" alt="Paschimottanasana">
+          </div>
+          <div class="col-md-7 p-4" style="background:#f8fafb; font-size:0.95rem; line-height:1.6;">
+            Paschimottanasana, or Seated Forward Bend, is a seated yoga pose that involves bending forward to touch your toes while keeping your legs straight. It stretches the spine, hamstrings, and shoulders, calms the mind, and stimulates the digestive system. To perform it, sit with legs extended, inhale to lengthen the spine while raising arms, then exhale to bend forward from the hips, reaching for your toes without forcing the stretch. 🧘‍♀️
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pose 2 Modal -->
+<div class="modal fade" id="pose2Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content shadow-lg rounded-4">
+      <div class="modal-header bg-success text-white rounded-top-4">
+        <h5 class="modal-title">Ardha Matsyendrasana</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-start-4" alt="Ardha Matsyendrasana">
+          </div>
+          <div class="col-md-7 p-4" style="background:#f8fafb; font-size:0.95rem; line-height:1.6;">
+           Ardha Matsyendrasana, or the Half Lord of the Fishes Pose, is a seated spinal twist yoga posture known for improving spinal flexibility and health. Its benefits include stimulating digestion, relieving back pain and stiffness, and reducing stress. To perform it, sit with one leg bent and the foot outside the opposite hip, twist the torso to the bent leg side, and place the opposite hand on the knee while reaching the other arm behind your back. 🌿
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pose 3 Modal -->
+<div class="modal fade" id="pose3Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content shadow-lg rounded-4">
+      <div class="modal-header bg-success text-white rounded-top-4">
+        <h5 class="modal-title">Bakasana</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="images/IMG-20240930-WA0019.jpg" class="img-fluid rounded-start-4" alt="Bakasana">
+          </div>
+          <div class="col-md-7 p-4" style="background:#f8fafb; font-size:0.95rem; line-height:1.6;">
+           Bakasana, or Crane Pose, is an intermediate-to-advanced arm-balancing yoga pose where you balance on your hands with your knees on your upper arms. It is a Sanskrit word that translates to "crane" and "pose" and is a form of balancing asana. The pose strengthens the arms, shoulders, core, and wrists, and improves balance and mental focus.✨
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- TRAINER -->
+<section class="container my-5">
+  <div class="row align-items-center g-4">
+    <div data-aos="fade-right" class="col-md-4 text-center">
+      <img src="images/IMG-20240930-WA0012.jpg" alt="Trainer Aditi" class="trainer-img main-img">
+    </div>
+    <div data-aos="fade-left" class="col-md-8">
+      <h4 class="fw-bolder text-capitalize">trainer: aditi dey</h4>
+      <p class="text-muted">Stay motivated by daily yoga with Aditi. Build your routine, track progress and meet your goals.</p>
+      <p>Join the community of over <strong>1,000 people</strong> we’ve been empowering since 2023.</p>
+      <a href="#pricing" class="btn btn-success">View membership</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="container my-5">
+  <h3 class="mb-4">Membership packages</h3>
+  <div class="row g-4 pricing">
+    <div data-aos="fade-right" class="col-md-4">
+      <div class="card card-round p-4 h-100 text-center">
+        <h5 class="mb-0">Lite</h5>
+        <small class="text-muted d-block mb-3">₹300 / Day</small>
+        <ul class="list-unstyled small text-start mb-4">
+          <li>• 1 hour of class</li>
+          <li>• stretching</li>
+          <li>• limited exercises</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline-success">Purchase</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div data-aos="fade-up" class="card card-round p-4 h-100 text-center border-success">
+        <h5 class="mb-0">Standard</h5>
+        <small class="text-muted d-block mb-3">₹2,400 / Month</small>
+        <ul class="list-unstyled small text-start mb-4">
+          <li>• 8 classes of 1hr</li>
+          <li>• full stretching</li>
+          <li>• 2 online webinars</li>
+        </ul>
+        <a href="#contact" class="btn btn-success">Purchase</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div data-aos="fade-left"class="card card-round p-4 h-100 text-center">
+        <h5 class="mb-0">Premium</h5>
+        <small class="text-muted d-block mb-3">₹25,000 / Year</small>
+        <ul class="list-unstyled small text-start mb-4">
+          <li>• 100 classes</li>
+          <li>• all stretching</li>
+          <li>• 25 webinars</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline-success">Purchase</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section  data-aos="fade-up" class="container my-5" id="membership">
+  <h1 class="text-center mb-5 fw-bold">Membership Includes</h1>
+
+  <div class="row g-5 text-center">
+
+    <div class="col-md-4">
+      <h1 class="counter" data-target="3000">0</h1>
+      <h6>Yoga Classes</h6>
+    </div>
+
+    <div class="col-md-4">
+      <h1 class="counter" data-target="100">0</h1>
+      <h6>Breathwork Practices</h6>
+    </div>
+
+    <div class="col-md-4">
+      <h1 class="counter" data-target="300">0</h1>
+      <h6>Courses & Challenges</h6>
+    </div>
+
+    <div class="col-md-4">
+      <h1 class="counter" data-target="700">0</h1>
+      <h6>Meditations</h6>
+    </div>
+
+    <div class="col-md-4">
+      <h1 class="counter" data-target="2700">0</h1>
+      <h6>In-Depth Articles</h6>
+    </div>
+
+    <div class="col-md-4">
+      <h1 class="counter" data-target="20">0</h1>
+      <h6>Documentaries & Podcasts</h6>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS (Bootstrap Carousel) -->
+<section class="container my-5">
+  <h4 class="mb-4">Hear from our community</h4>
+  <div id="testiCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card card-round p-4 testimonial">
+          <div class="d-flex align-items-center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" class="rounded-circle me-3" width="64" height="64">
+            <div>
+              <strong>Keith</strong><br>
+              <small class="text-muted">★★★★★</small>
+            </div>
+          </div>
+          <p class="mt-3 small">I have added these yoga classes into my daily routine. Teachers are skilled and classes are worth it.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card card-round p-4 testimonial">
+          <div class="d-flex align-items-center">
+            <img src="images/WhatsApp Image 2025-12-02 at 12.45.44 PM.jpeg" class="rounded-circle me-3" width="64" height="64">
+            <div>
+              <strong>Abhijit</strong><br>
+              <small class="text-muted">★★★★★</small>
+            </div>
+          </div>
+          <p class="mt-3 small">Best online yoga platform ever. Very helpful videos, best support!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card card-round p-4 testimonial">
+          <div class="d-flex align-items-center">
+            <img src="images/happy-man-with-eyeglasses-smiling-office_329181-14553.jpg" class="rounded-circle me-3" width="64" height="64">
+            <div>
+              <strong>Noah</strong><br>
+              <small class="text-muted">★★★★★</small>
+            </div>
+          </div>
+          <p class="mt-3 small">I enjoy every session. Amazing community and trainers.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testiCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testiCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section data-aos="fade-zoom" data-aos-delay="200" id="contact" class="container my-5">
+  <h4>Contact us</h4>
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+      <label class="form-label">First Name</label>
+      <input class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Last Name</label>
+      <input class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Age</label>
+      <input class="form-control" type="number">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Contact No.</label>
+      <input class="form-control" type="tel">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Email</label>
+      <input class="form-control" type="email">
+    </div>
+    <div class="col-12">
+      <label class="form-label">Address</label>
+      <input class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Pincode</label>
+      <input class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">District</label>
+      <input class="form-control">
+    </div>
+    <div class="col-12">
+      <button class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</section>
+
+<section class="container my-5">
+  <h4 class="mb-3">Our Location</h4>
+
+  <div class="ratio ratio-21x9">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14704.593057523094!2d88.33122908715819!3d22.87098080000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f891eebf7ad7e9%3A0xde1be5759b23ab1e!2sAnantpur%20crossing!5e0!3m2!1sen!2sin!4v1765273782480!5m2!1sen!2sin"
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<a href="https://wa.me/918777355831" target="_blank" class="btn btn-success ms-2">
+  <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</a>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container text-center">
+    <p class="small mb-1">@copyright yogabyaditi.com</p>
+    <p class="small text-muted">Made with ❤️ — replace images & text with your own content</p>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Small JS: form validation -->
+<script>
+  (function () {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+<script>
+const counters = document.querySelectorAll('.counter');
+let started = false;
+
+function startCounter(){
+  counters.forEach(counter => {
+    counter.innerHTML = "0";
+    const target = +counter.getAttribute('data-target');
+
+    const updateCounter = () => {
+      const count = +counter.innerText;
+      const speed = target / 200;      
+
+      if(count < target){
+        counter.innerText = Math.ceil(count + speed);
+        setTimeout(updateCounter,20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+    updateCounter();
+  });
+}
+
+window.addEventListener("scroll", ()=>{
+  const section = document.getElementById('membership');
+  if(window.scrollY > section.offsetTop - 500 && !started){
+    startCounter();
+    started = true;
+  }
+});
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    offset: 120,
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+
+
+
+
+</body>
+</html>
